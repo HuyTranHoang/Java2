@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="bg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.aptech.baikiemtra.controller.Bai2Controller">
+   <children>
+      <TextField fx:id="txtWeight" layoutX="191.0" layoutY="72.0" prefHeight="35.0" prefWidth="217.0" styleClass="input" />
+      <Label layoutX="32.0" layoutY="76.0" text="Cân nặng (Kg)" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="132.0" text="Chiều cao (cm)" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="196.0" text="Chuẩn đánh giá" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHeight" layoutX="191.0" layoutY="128.0" prefHeight="35.0" prefWidth="217.0" styleClass="input" />
+      <ComboBox fx:id="cbbEvaluation" layoutX="191.0" layoutY="188.0" prefHeight="43.0" prefWidth="268.0" styleClass="input" />
+      <Button fx:id="btnMBI" layoutX="476.0" layoutY="188.0" mnemonicParsing="false" onAction="#calculatedMBI" prefHeight="43.0" prefWidth="81.0" styleClass="btn" text="Tính MBI" />
+      <Label fx:id="lblResult" layoutX="-1.0" layoutY="318.0" prefHeight="27.0" prefWidth="600.0" styleClass="lblResult" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblErrWeight" layoutX="423.0" layoutY="81.0" textFill="RED" />
+      <Label fx:id="lblErrHeight" layoutX="423.0" layoutY="137.0" textFill="RED" />
+      <Button fx:id="btnMenu" layoutX="408.0" layoutY="244.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="27.0" prefWidth="154.0" styleClass="btn" text="Quay lại menu" />
+   </children>
+</AnchorPane>
