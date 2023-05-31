@@ -9,12 +9,10 @@ import javafx.scene.control.Button;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import vn.aptech.baikiemtra.utils.BaiKiemTraUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.IntStream;
 
 public class Bai1Controller extends BaiKiemTraUtils implements BaseController {
 
@@ -31,6 +29,7 @@ public class Bai1Controller extends BaiKiemTraUtils implements BaseController {
     private CategoryAxis categoryAxis;
 
     private Stage stage;
+    private FileChooser fileChooser;
 
     public void setStage(Stage stage) {
         this.stage = stage;
@@ -47,19 +46,15 @@ public class Bai1Controller extends BaiKiemTraUtils implements BaseController {
 
     public void addDataToBarChart(String[] data) {
         barChart.getData().clear();
-        XYChart.Series<String,Integer> series = new XYChart.Series<>();
+        XYChart.Series<String, Integer> series = new XYChart.Series<>();
         series.setName("2022");
-
-        AtomicInteger month = new AtomicInteger(1);
-        Arrays.stream(data).forEach(s -> {
-            series.getData().add(new XYChart.Data<>(String.valueOf(month.getAndIncrement()),Integer.parseInt(s)));
-        });
-
+        IntStream.range(0, data.length)
+                .forEach(i -> series.getData().add(new XYChart.Data<>(String.valueOf(i + 1), Integer.parseInt(data[i]))));
         barChart.getData().add(series);
     }
 
     public void initOpenFile() {
-        FileChooser fileChooser = new FileChooser();
+        fileChooser = new FileChooser();
         btnFileChooser.setOnAction(event -> {
             File file = fileChooser.showOpenDialog(this.stage);
             if (file != null) {

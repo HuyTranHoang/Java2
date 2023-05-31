@@ -54,45 +54,27 @@ public class Bai2Controller extends BaiKiemTraUtils implements BaseController {
         cbbEvaluation.getSelectionModel().selectFirst();
     }
 
-    private float getWeight() {
+    private float parseTextField(TextField textField, Label errorLabel, String fieldName) {
         try {
-            float weight = Float.parseFloat(txtWeight.getText());
-            if (weight > 0) {
-                lblErrWeight.setText("");
-                return weight;
+            float value = Float.parseFloat(textField.getText());
+            if (value > 0) {
+                errorLabel.setText("");
+                return value;
             }
-            lblErrWeight.setText("*Không thể nhập số âm hoặc 0");
+            errorLabel.setText("*Không thể nhập số âm hoặc 0");
             return -1;
         } catch (NumberFormatException e) {
-            lblErrWeight.setText("*Chỉ có thể nhập số thực");
-            if (txtWeight.getText().trim().isEmpty()){
-                lblErrWeight.setText("*Cần phải nhập cân nặng");
-            }
-            return -1;
-        }
-    }
-
-    private float getHeight() {
-        try {
-            float height = Float.parseFloat(txtHeight.getText());
-            if (height > 0) {
-                lblErrHeight.setText("");
-                return height;
-            }
-            lblErrHeight.setText("Không thể nhập số âm hoặc 0");
-            return -1;
-        } catch (NumberFormatException e) {
-            lblErrHeight.setText("*Chỉ có thể nhập số thực");
-            if (txtHeight.getText().trim().isEmpty()){
-                lblErrHeight.setText("*Cần phải nhập chiều cao");
+            errorLabel.setText("*Chỉ có thể nhập số thực");
+            if (textField.getText().trim().isEmpty()) {
+                errorLabel.setText("*Cần phải nhập " + fieldName);
             }
             return -1;
         }
     }
 
     public void calculatedMBI() {
-        float weight = getWeight();
-        float height = getHeight();
+        float weight = parseTextField(txtWeight, lblErrWeight, "cân nặng");
+        float height = parseTextField(txtHeight, lblErrHeight, "chiều cao");
         if (weight != -1 && height != -1) {
             height /= 100;
             float MBI = weight/(height*height);

@@ -15,6 +15,8 @@ import vn.aptech.baikiemtra.*;
 import vn.aptech.baikiemtra.utils.BaiKiemTraUtils;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Bai3Controller extends BaiKiemTraUtils implements BaseController {
@@ -52,30 +54,25 @@ public class Bai3Controller extends BaiKiemTraUtils implements BaseController {
     }
 
     public void initDefaultShape() {
-        Shape shapeObject;
-        AtomicInteger x = new AtomicInteger(0);
+        List<Color> fillColors = Arrays.asList(Color.RED, Color.BLUE, Color.PINK, Color.YELLOW, Color.GREEN);
+
         for (int i = 0; i < 3; i++) {
+            Shape shapeObject;
             switch (getRandomNumber(3)) {
                 case 0 -> shapeObject = new Rectangle(50, 50, 100, 75);
-                case 1 -> shapeObject = new Polygon(50, 50,100, 100,150, 50);
+                case 1 -> shapeObject = new Polygon(50, 50, 100, 100, 150, 50);
                 default -> shapeObject = new Ellipse(100, 75, 50, 25);
             }
-
             shapeObject.setStrokeWidth(2);
             shapeObject.setStroke(Color.BLACK);
             shapeObject.setStrokeType(StrokeType.INSIDE);
 
             setRandomAnimation(shapeObject);
 
-            switch (getRandomNumber(5)) {
-                case 0 -> shapeObject.setFill(Color.RED);
-                case 1 -> shapeObject.setFill(Color.BLUE);
-                case 2 -> shapeObject.setFill(Color.PINK);
-                case 3 -> shapeObject.setFill(Color.YELLOW);
-                default -> shapeObject.setFill(Color.GREEN);
-            }
+            int randomIndex = getRandomNumber(5);
+            shapeObject.setFill(fillColors.get(randomIndex));
 
-            shapeObject.setTranslateX(x.getAndAdd(150));
+            shapeObject.setTranslateX(i*150);
             shapeObject.setTranslateY(getRandomNumber(150));
 
             root.getChildren().add(shapeObject);

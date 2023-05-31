@@ -44,10 +44,11 @@ public class Bai3OptionController extends BaiKiemTraUtils {
     }
 
     public void optionConfirm() {
-        Toggle selectedToggle = tggShape.getSelectedToggle();
+        String selectedRadioValue = getSelectedRadio();
+
         int selectedColorIndex = cbbColor.getSelectionModel().getSelectedIndex();
 
-        if (selectedToggle == null) {
+        if (selectedRadioValue == null) {
             showErrorAlert("Hình vẽ không hợp lệ", "Bạn chưa chọn hình vẽ");
             return;
         }
@@ -57,9 +58,7 @@ public class Bai3OptionController extends BaiKiemTraUtils {
             return;
         }
 
-        RadioButton selectedRadioButton = (RadioButton) selectedToggle;
-        String selectedShape = selectedRadioButton.getText();
-        Shape shapeObject = createShape(selectedShape);
+        Shape shapeObject = createShape(selectedRadioValue);
 
         if (shapeObject != null) {
             shapeObject.setStrokeWidth(2);
@@ -88,6 +87,16 @@ public class Bai3OptionController extends BaiKiemTraUtils {
             case "Triangle" -> new Polygon(50, 50, 100, 100, 150, 50);
             default -> new Ellipse(100, 75, 50, 25);
         };
+    }
+
+    private String getSelectedRadio() {
+        return tggShape.getToggles()
+                .stream()
+                .map(RadioButton.class::cast)
+                .filter(RadioButton::isSelected)
+                .findFirst()
+                .map(RadioButton::getText)
+                .orElse(null);
     }
 
 
