@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddc02f42-becb-46ba-ac8d-b68049a8d961" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/SinhVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinhVien.java" afterDir="false" />
+    <list default="true" id="c07a4636-dfd0-44a1-9fc5-63d12e01fff7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BaiTap2/src/SinhVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BaiTap2/src/SinhVien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2QTa0aAUfsLbqdMiRyUWK7z7RVT" />
+  <component name="ProjectId" id="2QYll8fIIbgvUIO0lna8JTj2m0n" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,8 +34,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Aptech/Java2/BaiTap/BaiTap3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,14 +44,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ddc02f42-becb-46ba-ac8d-b68049a8d961" name="Changes" comment="" />
-      <created>1685379805665</created>
+      <changelist id="c07a4636-dfd0-44a1-9fc5-63d12e01fff7" name="Changes" comment="" />
+      <created>1685538546298</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685379805665</updated>
-      <workItem from="1685379808716" duration="130000" />
-      <workItem from="1685381412033" duration="712000" />
-      <workItem from="1685537613444" duration="890000" />
+      <updated>1685538546298</updated>
+      <workItem from="1685538548428" duration="1791000" />
     </task>
     <servers />
   </component>

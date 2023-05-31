@@ -4,7 +4,7 @@ public class SinhVien {
     private float diemLT, diemTH;
 
     public SinhVien() {
-        this.maSV = 1;
+        this.maSV = 0;
         this.hoTen = "Sinh viên";
         this.diemLT = 5;
         this.diemTH = 5;
@@ -24,7 +24,7 @@ public class SinhVien {
     public void setMaSV(int maSV) {
         if (maSV > 0) {
             this.maSV = maSV;
-        } else this.maSV = 1;
+        } else this.maSV = 0;
     }
 
     public String getHoTen() {
