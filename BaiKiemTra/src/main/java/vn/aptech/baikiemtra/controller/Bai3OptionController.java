@@ -54,7 +54,7 @@ public class Bai3OptionController extends BaiKiemTraUtils {
         }
 
         if (selectedColorIndex < 0) {
-            showErrorAlert("Chưa chọn màu", "Bạn chưa chọn màu cho hình vẽ");
+            showErrorAlert("Màu vẽ không hợp lệ", "Bạn chưa chọn màu cho hình vẽ");
             return;
         }
 
@@ -69,8 +69,8 @@ public class Bai3OptionController extends BaiKiemTraUtils {
 
             shapeObject.setFill(Color.web(cbbColor.getValue()));
 
-            double randomX = Math.random() * (root.getWidth() - shapeObject.getBoundsInLocal().getWidth());
-            double randomY = Math.random() * (root.getHeight() - shapeObject.getBoundsInLocal().getHeight());
+            double randomX = Math.random() * (root.getWidth() - shapeObject.getBoundsInLocal().getWidth() - 50);
+            double randomY = Math.random() * (root.getHeight() - shapeObject.getBoundsInLocal().getHeight() - 50);
             shapeObject.setTranslateX(randomX);
             shapeObject.setTranslateY(randomY);
 
