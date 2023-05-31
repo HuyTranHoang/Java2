@@ -9,15 +9,12 @@ public class HangThucPham {
     private double donGia;
     private LocalDate ngaySanXuat;
     private LocalDate ngayHetHan;
-
-
-    public HangThucPham() throws Exception {
-        throw new Exception("Không được để trống mã hàng");
-    }
-
+    
     public HangThucPham(String maHang) throws Exception {
         if (maHang.isEmpty())
             throw new Exception("Không được để trống mã hàng");
+        else
+            this.maHang = maHang;
     }
 
     public HangThucPham(String maHang, String tenHang, double donGia, LocalDate ngaySanXuat, LocalDate ngayHetHan) {
