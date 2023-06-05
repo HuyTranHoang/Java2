@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f7531f8-b014-46e5-b28c-f4f3e6fb8c53" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ChuyenXe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChuyenXeNgoaiThanh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChuyenXeNoiThanh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap01/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap01/BaiTap01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap01/BaiTap1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap01/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap01/src/ToaDo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap02/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap02/BaiTap02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap02/BaiTap2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap02/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap02/src/SinhVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap03/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap03/BaiTap03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap03/BaiTap3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap03/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap03/src/TamGiac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap04/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap04/BaiTap04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap04/BaiTap4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap04/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap04/src/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap05/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap05/BaiTap05.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap05/BaiTap5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap05/src/HangThucPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap05/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap06/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap06/BaiTap06.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap06/BaiTap6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap06/src/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap06/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/BaiTap07.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/BaiTap7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/src/HinhTron.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap07/src/ToaDo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/BaiTap08.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/BaiTap8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/src/CD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/src/CDList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap08/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/BaiTap09.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/BaiTap9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/src/CongNhan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/src/DanhSachCongNhan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap09/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/BaiTap10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/src/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/src/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap10/src/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap11/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap11/BaiTap11.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap11/src/HocVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap11/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/BaiTap12.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/src/HocVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/src/KhoaHoc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BaiTap12/src/TrungTamDaoTao.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2QnY1n8mmvpjZZZ7vFpldAOvhtt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f7531f8-b014-46e5-b28c-f4f3e6fb8c53" name="Changes" comment="" />
+      <created>1685990600399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685990600399</updated>
+      <workItem from="1685990602217" duration="993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
