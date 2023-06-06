@@ -3,8 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<ChuyenXeNgoaiThanh> dsXeNgoaiThanh = new ArrayList<>();
-        List<ChuyenXeNoiThanh> dsXeNoiThanh = new ArrayList<>();
+        List<ChuyenXe> dsChuyenXe = new ArrayList<>();
 
         ChuyenXeNgoaiThanh chuyenXeNgoaiThanh = new ChuyenXeNgoaiThanh(1,"Nguyễn Văn A",
                 "1234-56",50000,"Long An", 30);
@@ -16,24 +15,20 @@ public class Main {
         ChuyenXeNoiThanh chuyenXeNoiThanh2 = new ChuyenXeNoiThanh(4,"Lê Vương",
                 "2222-35",80000,25,4500);
 
-        dsXeNgoaiThanh.add(chuyenXeNgoaiThanh);
-        dsXeNgoaiThanh.add(chuyenXeNgoaiThanh2);
+        dsChuyenXe.add(chuyenXeNgoaiThanh);
+        dsChuyenXe.add(chuyenXeNgoaiThanh2);
 
-        dsXeNoiThanh.add(chuyenXeNoiThanh);
-        dsXeNoiThanh.add(chuyenXeNoiThanh2);
+        dsChuyenXe.add(chuyenXeNoiThanh);
+        dsChuyenXe.add(chuyenXeNoiThanh2);
 
-//        Foreach tính tổng doanh thu
-//        for (ChuyenXe chuyenXe: dsXeNgoaiThanh) {
-//            doanhThuNgoaiThanh += chuyenXe.getDoanhThu();
-//        }
-//
-//        for (ChuyenXe chuyenXe: dsXeNoiThanh) {
-//            doanhThuNoiThanh += chuyenXe.getDoanhThu();
-//        }
-
-//        Stream api để tính tổng doanh thu
-        double doanhThuNgoaiThanh = dsXeNgoaiThanh.stream().mapToDouble(ChuyenXe::getDoanhThu).sum();
-        double doanhThuNoiThanh = dsXeNoiThanh.stream().mapToDouble(ChuyenXe::getDoanhThu).sum();
+        double doanhThuNgoaiThanh = dsChuyenXe.stream()
+                .filter(chuyenXe -> chuyenXe instanceof ChuyenXeNgoaiThanh)
+                .mapToDouble(ChuyenXe::getDoanhThu)
+                .sum();
+        double doanhThuNoiThanh = dsChuyenXe.stream()
+                .filter(chuyenXe -> chuyenXe instanceof ChuyenXeNoiThanh)
+                .mapToDouble(ChuyenXe::getDoanhThu)
+                .sum();
 
 
         System.out.println("Tổng doanh thu: " + (doanhThuNgoaiThanh + doanhThuNoiThanh));

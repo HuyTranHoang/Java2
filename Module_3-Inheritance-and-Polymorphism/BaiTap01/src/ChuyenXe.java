@@ -1,8 +1,8 @@
 public class ChuyenXe {
-    private int maSo;
-    private String hoTenTaiXe;
-    private String soXe;
-    private double doanhThu;
+    protected int maSo;
+    protected String hoTenTaiXe;
+    protected String soXe;
+    protected double doanhThu;
 
     public ChuyenXe() {
     }
