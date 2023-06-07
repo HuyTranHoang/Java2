@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88eb613e-7d8c-4a4d-ba80-00dd8ab44ea8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BaiTap02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SachGiaoKhoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SachThamKhao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TinhTrang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BaiTap01/src/ChuyenXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BaiTap01/src/ChuyenXe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BaiTap01/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BaiTap01/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SachGiaoKhoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SachGiaoKhoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SachThamKhao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SachThamKhao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
       <workItem from="1686036173734" duration="1292000" />
       <workItem from="1686037649749" duration="40000" />
       <workItem from="1686044316130" duration="13000" />
+      <workItem from="1686119839192" duration="378000" />
     </task>
     <servers />
   </component>

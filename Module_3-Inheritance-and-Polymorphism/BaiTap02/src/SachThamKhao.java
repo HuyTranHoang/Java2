@@ -23,4 +23,16 @@ public class SachThamKhao extends Sach {
     public double thanhTien() {
         return soLuong * donGia + tienThue;
     }
+
+    @Override
+    public String toString() {
+        return "SachThamKhao{" +
+                "tienThue=" + tienThue +
+                ", maSach=" + maSach +
+                ", ngayNhap=" + ngayNhap +
+                ", donGia=" + donGia +
+                ", soLuong=" + soLuong +
+                ", nhaXuatBan='" + nhaXuatBan + '\'' +
+                '}';
+    }
 }

@@ -26,5 +26,15 @@ public class SachGiaoKhoa extends Sach {
         return soLuong * donGia * 0.5;
     }
 
-
+    @Override
+    public String toString() {
+        return "SachGiaoKhoa{" +
+                "tinhTrang=" + tinhTrang +
+                ", maSach=" + maSach +
+                ", ngayNhap=" + ngayNhap +
+                ", donGia=" + donGia +
+                ", soLuong=" + soLuong +
+                ", nhaXuatBan='" + nhaXuatBan + '\'' +
+                '}';
+    }
 }
