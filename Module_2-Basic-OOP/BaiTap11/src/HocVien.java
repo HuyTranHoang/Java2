@@ -6,11 +6,13 @@ public class HocVien {
     private String hoTen;
     private LocalDate namSinh;
     private List<Double> diemMonHoc;
+    private List<String> monThiLaiList;
 
     public HocVien(String hoTen, LocalDate namSinh, List<Double> diemMonHoc) {
         this.hoTen = hoTen;
         this.namSinh = namSinh;
         this.diemMonHoc = diemMonHoc;
+        this.monThiLaiList = new ArrayList<>();
     }
 
     public String getHoTen() {
@@ -37,6 +39,10 @@ public class HocVien {
         this.diemMonHoc = diemMonHoc;
     }
 
+    public List<String> getMonThiLaiList() {
+        return monThiLaiList;
+    }
+
     public double diemTrungBinhMon() {
         double sum = 0;
         for (double diem : diemMonHoc) {
@@ -54,7 +60,7 @@ public class HocVien {
         return true;
     }
 
-    public List<String> monThiLai() {
+    public List<String> tenMonThiLai() {
         List<String> monThiLai = new ArrayList<>();
         for (int i = 0; i < diemMonHoc.size(); i++) {
             if (diemMonHoc.get(i) < 5) {
