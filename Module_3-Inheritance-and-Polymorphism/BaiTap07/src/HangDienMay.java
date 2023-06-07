@@ -1,5 +1,5 @@
 public class HangDienMay extends HangHoa {
-    private int thoiGianBaoHang;
+    private int thoiGianBaoHanh;
     private double congSuat;
 
     public HangDienMay(String maHang) throws Exception {
@@ -8,16 +8,16 @@ public class HangDienMay extends HangHoa {
 
     public HangDienMay(String maHang, String tenHang, double donGia, int soLuongTon, int thoiGianBaoHang, double congSuat) throws Exception {
         super(maHang, tenHang, donGia, soLuongTon);
-        this.thoiGianBaoHang = Math.max(thoiGianBaoHang, 0);
+        this.thoiGianBaoHanh = Math.max(thoiGianBaoHang, 0);
         this.congSuat = Math.max(congSuat, 0);
     }
 
-    public int getThoiGianBaoHang() {
-        return thoiGianBaoHang;
+    public int getThoiGianBaoHanh() {
+        return thoiGianBaoHanh;
     }
 
-    public void setThoiGianBaoHang(int thoiGianBaoHang) {
-        this.thoiGianBaoHang = Math.max(thoiGianBaoHang, 0);
+    public void setThoiGianBaoHanh(int thoiGianBaoHanh) {
+        this.thoiGianBaoHanh = Math.max(thoiGianBaoHanh, 0);
     }
 
     public double getCongSuat() {
@@ -29,16 +29,16 @@ public class HangDienMay extends HangHoa {
     }
 
     @Override
-    public String mucDoBanBuon() {
+    public MucDoBanBuon mucDoBanBuon() {
         if (this.soLuongTon < 3)
-            return "Bán được";
-        return "Không đánh giá";
+            return MucDoBanBuon.BAN_DUOC;
+        return MucDoBanBuon.KHONG_DANH_GIA;
     }
 
     @Override
     public String toString() {
         return "HangDienMay{" +
-                "thoiGianBaoHang=" + thoiGianBaoHang +
+                "thoiGianBaoHang=" + thoiGianBaoHanh +
                 ", congSuat=" + congSuat +
                 ", maHang='" + maHang + '\'' +
                 ", tenHang='" + tenHang + '\'' +

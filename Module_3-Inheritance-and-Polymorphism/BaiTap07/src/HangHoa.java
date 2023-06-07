@@ -62,6 +62,6 @@ public abstract class HangHoa {
         return soLuongTon;
     }
 
-    public abstract String mucDoBanBuon();
+    public abstract MucDoBanBuon mucDoBanBuon();
 
 }

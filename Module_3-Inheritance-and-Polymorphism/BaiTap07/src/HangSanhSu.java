@@ -21,11 +21,11 @@ public class HangSanhSu extends HangHoa {
     }
 
     @Override
-    public String mucDoBanBuon() {
+    public MucDoBanBuon mucDoBanBuon() {
         long soNgayChenhLech = ChronoUnit.DAYS.between(this.ngayNhapKho, LocalDate.now());
         if (this.soLuongTon > 50 & soNgayChenhLech > 10)
-            return "Bán chậm";
-        return "Không đánh giá";
+            return MucDoBanBuon.BAN_CHAM;
+        return MucDoBanBuon.KHONG_DANH_GIA;
     }
 
     @Override

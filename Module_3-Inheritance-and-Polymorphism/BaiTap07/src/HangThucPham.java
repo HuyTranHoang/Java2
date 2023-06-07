@@ -51,10 +51,10 @@ public class HangThucPham extends HangHoa {
     }
 
     @Override
-    public String mucDoBanBuon() {
+    public MucDoBanBuon mucDoBanBuon() {
         if (this.soLuongTon > 0 && this.ngayHetHan.isBefore(LocalDate.now()))
-            return "Khó bán";
-        return "Không đánh giá";
+            return MucDoBanBuon.KHO_BAN;
+        return MucDoBanBuon.KHONG_DANH_GIA;
     }
 
     @Override
