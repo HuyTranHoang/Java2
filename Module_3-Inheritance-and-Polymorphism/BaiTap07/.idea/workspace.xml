@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ee15563-44db-4014-bfb8-66f82b2e312c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MucDoBanBuon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DanhSachHangHoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DanhSachHangHoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangDienMay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangDienMay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangHoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangHoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangSanhSu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangSanhSu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangThucPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangThucPham.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +54,8 @@
       <workItem from="1686049086950" duration="2599000" />
       <workItem from="1686119827334" duration="11000" />
       <workItem from="1686146547314" duration="2806000" />
-      <workItem from="1686156558546" duration="970000" />
+      <workItem from="1686156558546" duration="1617000" />
+      <workItem from="1686171705092" duration="3534000" />
     </task>
     <servers />
   </component>
