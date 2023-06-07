@@ -61,7 +61,7 @@ public class KhoaHoc {
                 "tenKhoaHoc='" + tenKhoaHoc + '\'' +
                 ", ngayMoKhoaHoc=" + ngayMoKhoaHoc +
                 ", thoiGianHoc='" + thoiGianHoc + '\'' +
-                ", danhSachHocVien=" + danhSachHocVien +
+                ", \ndanhSachHocVien=" + danhSachHocVien +
                 '}';
     }
 }

@@ -8,6 +8,7 @@ public class Main {
         List<HocVien> danhSachHocVienJava = new ArrayList<>();
         List<HocVien> danhSachHocVienWeb = new ArrayList<>();
 
+//        Tạo 2 khoá học
         KhoaHoc khoaHocJava = new KhoaHoc("Lập trình Java căn bản",
                         LocalDate.of(2023,6,6),
                         "18:00 - 20:00",
@@ -20,6 +21,7 @@ public class Main {
         trungTam.themKhoaHoc(khoaHocJava);
         trungTam.themKhoaHoc(khoaHocWeb);
 
+//        Tạo 3 học viên
         HocVien hocVien1 = new HocVien("Nguyễn Văn A",
                 "123 Quận Bình Thành, TP HCM",
                 "0123456789");
@@ -39,9 +41,10 @@ public class Main {
 
 
         // Tìm kiếm khoá học
-        KhoaHoc khoaHocTimKiem = trungTam.timKhoaHoc("Java");
+        List<KhoaHoc> khoaHocTimKiem = trungTam.timKhoaHoc("Java");
         if (khoaHocTimKiem != null) {
-            System.out.println("Tìm thấy khoá học: " + khoaHocTimKiem.getTenKhoaHoc());
+            System.out.println("Tìm thấy khoá học: ");
+            khoaHocTimKiem.forEach(System.out::println);
         } else {
             System.out.println("Không tìm thấy khoá học");
         }
@@ -49,16 +52,22 @@ public class Main {
         // Tìm kiếm các khoá học chưa bắt đầu
         List<KhoaHoc> khoaHocChuaBatDau = trungTam.timKhoaHocChuaBatDau();
         System.out.println("Các khoá học chưa bắt đầu:");
-        for (KhoaHoc khoaHoc : khoaHocChuaBatDau) {
-            System.out.println(khoaHoc.getTenKhoaHoc());
-        }
+        if (khoaHocChuaBatDau.size() == 0)
+            System.out.println("Không có");
+        else
+            for (KhoaHoc khoaHoc : khoaHocChuaBatDau) {
+                System.out.println(khoaHoc.getTenKhoaHoc());
+            }
 
         // Tìm kiếm các khoá học chưa kết thúc ( Giả sử kết thúc sau 30 ngày bắt đầu )
         List<KhoaHoc> khoaHocChuaKetThuc = trungTam.timKhoaHocChuaKetThuc();
         System.out.println("Các khoá học chưa kết thúc:");
-        for (KhoaHoc khoaHoc : khoaHocChuaKetThuc) {
-            System.out.println(khoaHoc.getTenKhoaHoc());
-        }
+        if (khoaHocChuaKetThuc.size() == 0)
+            System.out.println("Không có");
+        else
+            for (KhoaHoc khoaHoc : khoaHocChuaKetThuc) {
+                System.out.println(khoaHoc.getTenKhoaHoc());
+            }
 
         // Tìm kiếm các khoá học của một học viên 1
         List<KhoaHoc> khoaHocCuaHocVien = trungTam.timKhoaHocCuaHocVien(hocVien1);

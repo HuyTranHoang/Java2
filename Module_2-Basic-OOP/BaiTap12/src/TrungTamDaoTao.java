@@ -13,13 +13,14 @@ public class TrungTamDaoTao {
         danhSachKhoaHoc.add(khoaHoc);
     }
 
-    public KhoaHoc timKhoaHoc(String tenKhoaHoc) {
+    public List<KhoaHoc> timKhoaHoc(String tenKhoaHoc) {
+        List<KhoaHoc> list = new ArrayList<>();
         for (KhoaHoc khoaHoc : danhSachKhoaHoc) {
             if (khoaHoc.getTenKhoaHoc().contains(tenKhoaHoc)) {
-                return khoaHoc;
+                list.add(khoaHoc);
             }
         }
-        return null;
+        return list;
     }
 
     public List<KhoaHoc> timKhoaHocChuaKetThuc() {

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e43d032f-3012-41b7-9407-406586aeefec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BaiTap11/src/HocVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HocVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/KhoaHoc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TrungTamDaoTao.java" afterDir="false" />
-    </list>
+    <list default="true" id="e43d032f-3012-41b7-9407-406586aeefec" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +18,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="2QnOpO053yRm5cyuLt4fBwhB5ZW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,10 +33,12 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Aptech/Java2/BaiTap/Module_2-Basic-OOP/BaiTap12",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,10 +51,17 @@
       <option name="presentableId" value="Default" />
       <updated>1685986062366</updated>
       <workItem from="1685986063363" duration="2544000" />
+      <workItem from="1686120292058" duration="481000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
