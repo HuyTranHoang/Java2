@@ -41,14 +41,21 @@ public class Main {
                         System.out.println("Nhập loại hàng hoá bạn muốn nhập: ");
                         int loaiHangHoa = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.println("Nhập mã hàng: ");
-                        String maHang = scanner.nextLine();
-                        System.out.println("Nhập tên hàng: ");
-                        String tenHang = scanner.nextLine();
-                        System.out.println("Nhập đơn giá: ");
-                        double donGia = scanner.nextDouble();
-                        System.out.println("Nhập số luợng tồn: ");
-                        int soLuongTon = scanner.nextInt();
+
+                        String maHang = null, tenHang = null;
+                        double donGia = 0;
+                        int soLuongTon = 0;
+
+                        if (loaiHangHoa > 0 && loaiHangHoa < 4) {
+                            System.out.println("Nhập mã hàng: ");
+                            maHang = scanner.nextLine();
+                            System.out.println("Nhập tên hàng: ");
+                            tenHang = scanner.nextLine();
+                            System.out.println("Nhập đơn giá: ");
+                            donGia = scanner.nextDouble();
+                            System.out.println("Nhập số luợng tồn: ");
+                            soLuongTon = scanner.nextInt();
+                        }
 
                         switch (loaiHangHoa) {
                             case 1 -> {
@@ -83,6 +90,7 @@ public class Main {
                                 LocalDate ngayHetHan = LocalDate.parse(ngayHetHanString, formatter);
                                 danhSachHangHoa.them(new HangThucPham(maHang, tenHang, donGia, soLuongTon, nhaCungCap, ngaySanXuat, ngayHetHan));
                             }
+                            default -> System.out.println("Không có lựa chọn này!");
                         }
                     }
                 }
