@@ -42,13 +42,11 @@ public class Main {
                         int loaiHangHoa = scanner.nextInt();
                         scanner.nextLine();
 
-                        String maHang = null, tenHang = null;
+                        String tenHang = null;
                         double donGia = 0;
                         int soLuongTon = 0;
 
                         if (loaiHangHoa > 0 && loaiHangHoa < 4) {
-                            System.out.println("Nhập mã hàng: ");
-                            maHang = scanner.nextLine();
                             System.out.println("Nhập tên hàng: ");
                             tenHang = scanner.nextLine();
                             System.out.println("Nhập đơn giá: ");
@@ -65,7 +63,7 @@ public class Main {
                                 thoiGianBaoHanh = scanner.nextInt();
                                 System.out.println("Nhập công suất: ");
                                 congSuat = scanner.nextDouble();
-                                danhSachHangHoa.them(new HangDienMay(maHang, tenHang, donGia, soLuongTon, thoiGianBaoHanh, congSuat));
+                                danhSachHangHoa.them(new HangDienMay(tenHang, donGia, soLuongTon, thoiGianBaoHanh, congSuat));
                             }
                             case 2 -> {
                                 scanner.nextLine();
@@ -75,7 +73,7 @@ public class Main {
                                 String ngayNhapKhoString = scanner.nextLine();
                                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                                 LocalDate ngayNhapKho = LocalDate.parse(ngayNhapKhoString, formatter);
-                                danhSachHangHoa.them(new HangSanhSu(maHang, tenHang, donGia, soLuongTon, nhaSanXuat, ngayNhapKho));
+                                danhSachHangHoa.them(new HangSanhSu(tenHang, donGia, soLuongTon, nhaSanXuat, ngayNhapKho));
                             }
                             case 3 -> {
                                 scanner.nextLine();
@@ -88,7 +86,7 @@ public class Main {
                                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                                 LocalDate ngaySanXuat = LocalDate.parse(ngaySanXuatString, formatter);
                                 LocalDate ngayHetHan = LocalDate.parse(ngayHetHanString, formatter);
-                                danhSachHangHoa.them(new HangThucPham(maHang, tenHang, donGia, soLuongTon, nhaCungCap, ngaySanXuat, ngayHetHan));
+                                danhSachHangHoa.them(new HangThucPham(tenHang, donGia, soLuongTon, nhaCungCap, ngaySanXuat, ngayHetHan));
                             }
                             default -> System.out.println("Không có lựa chọn này!");
                         }
@@ -123,7 +121,7 @@ public class Main {
                         System.out.println("Lỗi: Bạn chưa nhập số lượng phần tử cho danh sách");
                     else {
                         danhSachHangHoa.sapXepTheoTenTangDan();
-                        System.out.printf("Danh sách sau khi sắp xếp: ");
+                        System.out.println("Danh sách sau khi sắp xếp: ");
                         danhSachHangHoa.inToanBo();
                     }
                 }
@@ -132,7 +130,7 @@ public class Main {
                         System.out.println("Lỗi: Bạn chưa nhập số lượng phần tử cho danh sách");
                     else {
                         danhSachHangHoa.sapXepHangHoaTheoSoLuongGiamDan();
-                        System.out.printf("Danh sách sau khi sắp xếp: ");
+                        System.out.println("Danh sách sau khi sắp xếp: ");
                         danhSachHangHoa.inToanBo();
                     }
                 }

@@ -5,25 +5,17 @@ public class HangThucPham extends HangHoa {
     private LocalDate ngaySanXuat;
     private LocalDate ngayHetHan;
 
-    public HangThucPham(String maHang) throws Exception {
-        super(maHang);
+    public HangThucPham() throws Exception {
+        super();
         this.ngaySanXuat = LocalDate.now();
         this.ngayHetHan = this.ngaySanXuat;
     }
 
-    public HangThucPham(String maHang, String tenHang, double donGia, int soLuongTon, String nhaCungCap, LocalDate ngaySanXuat, LocalDate ngayHetHan) throws Exception {
-        super(maHang, tenHang, donGia, soLuongTon);
-        this.nhaCungCap = nhaCungCap;
-
-        if (ngaySanXuat.isAfter(LocalDate.now()))
-            this.ngaySanXuat = LocalDate.now();
-        else
-            this.ngaySanXuat = ngaySanXuat;
-
-        if (ngayHetHan.isBefore(this.ngaySanXuat))
-            this.ngayHetHan = this.ngaySanXuat;
-        else
-            this.ngayHetHan = ngayHetHan;
+    public HangThucPham(String tenHang, double donGia, int soLuongTon, String nhaCungCap, LocalDate ngaySanXuat, LocalDate ngayHetHan) throws Exception {
+        super(tenHang, donGia, soLuongTon);
+        setNhaCungCap(nhaCungCap);
+        setNgaySanXuat(ngaySanXuat);
+        setNgayHetHan(ngayHetHan);
     }
 
     public String getNhaCungCap() {
@@ -39,7 +31,10 @@ public class HangThucPham extends HangHoa {
     }
 
     public void setNgaySanXuat(LocalDate ngaySanXuat) {
-        this.ngaySanXuat = ngaySanXuat;
+        if (ngaySanXuat.isAfter(LocalDate.now()))
+            this.ngaySanXuat = LocalDate.now();
+        else
+            this.ngaySanXuat = ngaySanXuat;
     }
 
     public LocalDate getNgayHetHan() {
@@ -47,7 +42,10 @@ public class HangThucPham extends HangHoa {
     }
 
     public void setNgayHetHan(LocalDate ngayHetHan) {
-        this.ngayHetHan = ngayHetHan;
+        if (ngayHetHan.isBefore(this.ngaySanXuat))
+            this.ngayHetHan = this.ngaySanXuat;
+        else
+            this.ngayHetHan = ngayHetHan;
     }
 
     @Override

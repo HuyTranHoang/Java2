@@ -1,34 +1,29 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Random;
+import java.util.UUID;
+
 public abstract class HangHoa {
-    protected String maHang;
+    protected int maHang;
     protected String tenHang;
     protected double donGia;
     protected int soLuongTon;
 
 
-    public HangHoa(String maHang) throws Exception {
-        if (maHang.isEmpty())
-            throw new Exception("Không được để trống mã hàng");
-        else
-            this.maHang = maHang;
-
+    public HangHoa() throws Exception {
+        UUID uuid = UUID.randomUUID();
+        this.maHang = uuid.hashCode();
         this.tenHang = "xxx";
         this.donGia = 0;
         this.soLuongTon = 0;
     }
 
-    public HangHoa(String maHang, String tenHang, double donGia, int soLuongTon) throws Exception {
-        if (maHang.isEmpty())
-            throw new Exception("Không được để trống mã hàng");
-        else
-            this.maHang = maHang;
-
-        if (tenHang.isEmpty())
-            this.tenHang = "xxx";
-        else
-            this.tenHang = tenHang;
-
-        this.donGia = Math.max(donGia,0);
-        this.soLuongTon = Math.max(soLuongTon, 0);
+    public HangHoa(String tenHang, double donGia, int soLuongTon) throws Exception {
+        UUID uuid = UUID.randomUUID();
+        this.maHang = uuid.hashCode();
+        setTenHang(tenHang);
+        setDonGia(donGia);
+        setSoLuongTon(soLuongTon);
     }
 
     public void setTenHang(String tenHang) {
@@ -46,7 +41,7 @@ public abstract class HangHoa {
         this.soLuongTon = Math.max(soLuongTon, 0);
     }
 
-    public String getMaHang() {
+    public int getMaHang() {
         return maHang;
     }
 

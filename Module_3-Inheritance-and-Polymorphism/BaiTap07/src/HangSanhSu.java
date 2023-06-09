@@ -5,15 +5,30 @@ public class HangSanhSu extends HangHoa {
     private String nhaSanXuat;
     private LocalDate ngayNhapKho;
 
-    public HangSanhSu(String maHang) throws Exception {
-        super(maHang);
+    public HangSanhSu() throws Exception {
+        super();
         this.ngayNhapKho = LocalDate.now();
     }
 
-    public HangSanhSu(String maHang, String tenHang, double donGia, int soLuongTon, String nhaSanXuat, LocalDate ngayNhapKho) throws Exception {
-        super(maHang, tenHang, donGia, soLuongTon);
-        this.nhaSanXuat = nhaSanXuat;
+    public HangSanhSu(String tenHang, double donGia, int soLuongTon, String nhaSanXuat, LocalDate ngayNhapKho) throws Exception {
+        super(tenHang, donGia, soLuongTon);
+        setNhaSanXuat(nhaSanXuat);
+        setNgayNhapKho(ngayNhapKho);
+    }
 
+    public String getNhaSanXuat() {
+        return nhaSanXuat;
+    }
+
+    public void setNhaSanXuat(String nhaSanXuat) {
+        this.nhaSanXuat = nhaSanXuat;
+    }
+
+    public LocalDate getNgayNhapKho() {
+        return ngayNhapKho;
+    }
+
+    public void setNgayNhapKho(LocalDate ngayNhapKho) {
         if (ngayNhapKho.isAfter(LocalDate.now()))
             this.ngayNhapKho = LocalDate.now();
         else

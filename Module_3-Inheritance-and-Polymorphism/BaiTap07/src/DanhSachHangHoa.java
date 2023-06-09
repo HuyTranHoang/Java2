@@ -14,7 +14,7 @@ public class DanhSachHangHoa {
 
     public void them(HangHoa hangHoa) {
         for (int i = 0; i < count; i++) {
-            if (hangHoaList[i].getMaHang().equals(hangHoa.getMaHang())) {
+            if (hangHoaList[i].getMaHang() == hangHoa.getMaHang()) {
                 System.out.println("Lỗi: Mã hàng hoá này đã có tồn tại trong danh sách");
                 return;
             }

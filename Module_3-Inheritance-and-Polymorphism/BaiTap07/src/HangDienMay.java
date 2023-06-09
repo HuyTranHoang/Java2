@@ -2,14 +2,14 @@ public class HangDienMay extends HangHoa {
     private int thoiGianBaoHanh;
     private double congSuat;
 
-    public HangDienMay(String maHang) throws Exception {
-        super(maHang);
+    public HangDienMay() throws Exception {
+        super();
     }
 
-    public HangDienMay(String maHang, String tenHang, double donGia, int soLuongTon, int thoiGianBaoHang, double congSuat) throws Exception {
-        super(maHang, tenHang, donGia, soLuongTon);
-        this.thoiGianBaoHanh = Math.max(thoiGianBaoHang, 0);
-        this.congSuat = Math.max(congSuat, 0);
+    public HangDienMay(String tenHang, double donGia, int soLuongTon, int thoiGianBaoHanh, double congSuat) throws Exception {
+        super(tenHang, donGia, soLuongTon);
+        setThoiGianBaoHanh(thoiGianBaoHanh);
+        setCongSuat(congSuat);
     }
 
     public int getThoiGianBaoHanh() {
@@ -38,7 +38,7 @@ public class HangDienMay extends HangHoa {
     @Override
     public String toString() {
         return "HangDienMay{" +
-                "thoiGianBaoHang=" + thoiGianBaoHanh +
+                "thoiGianBaoHanh=" + thoiGianBaoHanh +
                 ", congSuat=" + congSuat +
                 ", maHang='" + maHang + '\'' +
                 ", tenHang='" + tenHang + '\'' +
