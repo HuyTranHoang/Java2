@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="881.0" styleClass="background" stylesheets="@app.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.fxdatabase.StudentController">
+   <children>
+      <Label layoutX="37.0" layoutY="70.0" text="Name" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="111.0" text="Gender" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="157.0" text="Date of birth" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="133.0" layoutY="66.0" prefHeight="29.0" prefWidth="200.0" />
+      <MFXRadioButton fx:id="rbMale" layoutX="133.0" layoutY="112.0" styleClass="mfx-radio-button" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="tggGender" />
+         </toggleGroup></MFXRadioButton>
+      <MFXButton id="custom" fx:id="btnAdd" layoutX="24.0" layoutY="250.0" onAction="#add" prefHeight="20.0" prefWidth="79.0" rippleColor="#9975eb" text="Add" />
+      <MFXRadioButton fx:id="rbFemale" layoutX="203.0" layoutY="112.0" styleClass="mfx-radio-button" text="Female" toggleGroup="$tggGender" />
+      <MFXDatePicker fx:id="dpDob" layoutX="133.0" layoutY="148.0" />
+      <MFXTableView fx:id="tvStudent" layoutX="402.0" layoutY="19.0" prefHeight="368.0" prefWidth="463.0" />
+      <MFXButton id="custom" fx:id="btnEdit" layoutX="121.0" layoutY="250.0" onAction="#edit" prefHeight="20.0" prefWidth="79.0" rippleColor="#9975eb" text="Edit" />
+      <MFXButton id="custom" fx:id="btnUpdate" layoutX="212.0" layoutY="250.0" onAction="#update" prefHeight="20.0" prefWidth="79.0" rippleColor="#9975eb" text="Update" />
+      <MFXButton id="custom" fx:id="btnDelete" layoutX="305.0" layoutY="250.0" onAction="#delete" prefHeight="20.0" prefWidth="79.0" rippleColor="#9975eb" text="Delete" />
+      <Label fx:id="lblError" alignment="CENTER" layoutX="21.0" layoutY="320.0" prefHeight="18.0" prefWidth="364.0" textFill="#975dcd">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="iconErrName" fill="#9975eb" glyphName="WARNING" layoutX="339.0" layoutY="86.0" size="16" styleClass="hidden" text="" />
+      <FontAwesomeIconView fx:id="iconErrGender" fill="#9975eb" glyphName="WARNING" layoutX="279.0" layoutY="127.0" size="16" styleClass="hidden" text="" />
+      <FontAwesomeIconView fx:id="iconErrDob" fill="#9975eb" glyphName="WARNING" layoutX="339.0" layoutY="174.0" size="16" styleClass="hidden" text="" />
+   </children>
+</AnchorPane>

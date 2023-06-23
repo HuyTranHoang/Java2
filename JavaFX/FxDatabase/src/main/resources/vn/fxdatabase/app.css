@@ -1,0 +1,46 @@
+.mfx-button {
+    -fx-font-family: 'Visby Round CF Medium';
+    -fx-text-fill: #fff;
+}
+
+.mfx-button .mfx-ripple-generator {
+    -mfx-ripple-radius: 40;
+    -mfx-auto-clip: true;
+}
+
+.mfx-button .text {
+    -fx-font-smoothing-type: lcd;
+}
+
+#custom {
+    -fx-background-color: #7845e6;
+    -fx-text-fill: #fff;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.background {
+    -fx-background-color: linear-gradient(from 34.8% 17.1% to 100.0% 77.6%, #cab7d9 0.0%, #7873c0 100.0%);
+}
+
+.myDialog{
+    -fx-background-color: #f2f0f5;
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: #f2f0f5;
+}
+
+.myDialog > *.label.content{
+    visibility: hidden;
+    opacity: 0;
+}
+.myDialog:header *.header-panel{
+    -fx-background-color: #f2f0f5;
+}
+.myDialog:header *.header-panel *.label{
+    -fx-font-size: 14px;
+    -fx-fill: #fff;
+}
