@@ -209,9 +209,9 @@ public class EmloyeeController extends ArrayList<Emloyee> {
     }
 
     private void addDataToTableview() {
-        colCode.setCellValueFactory(new PropertyValueFactory<>("Code"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        colSalary.setCellValueFactory(new PropertyValueFactory<>("Salary"));
+        colCode.setCellValueFactory(new PropertyValueFactory<>("code"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
         observableList = FXCollections.observableArrayList(this);
         tvEmloyee.setItems(observableList);
