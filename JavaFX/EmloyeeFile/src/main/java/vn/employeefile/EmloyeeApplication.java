@@ -1,4 +1,4 @@
-package vn.emloyeefile;
+package vn.employeefile;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

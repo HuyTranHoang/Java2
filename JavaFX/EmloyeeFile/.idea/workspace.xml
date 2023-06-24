@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="826ceb61-9a68-46ed-8f5e-5dcfbe02d240" name="Changes" comment="" />
+    <list default="true" id="826ceb61-9a68-46ed-8f5e-5dcfbe02d240" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/Emloyee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/Emloyee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/EmloyeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/EmloyeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/emloyeefile/emloyee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/emloyeefile/emloyee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/employee.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="2Rbn9iLbVLGeIkbvhTAxFRzgXbx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +39,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Aptech/Java2/BaiTap/JavaFX/EmloyeeFile&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -43,11 +57,11 @@
   </component>
   <component name="RunManager">
     <configuration name="EmloyeeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.emloyeefile.EmloyeeApplication" />
+      <option name="MAIN_CLASS_NAME" value="vn.employeefile.EmloyeeApplication" />
       <module name="EmloyeeFile" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="vn.emloyeefile.*" />
+          <option name="PATTERN" value="vn.employeefile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,6 +85,8 @@
       <updated>1687527500548</updated>
       <workItem from="1687527501645" duration="4234000" />
       <workItem from="1687536964932" duration="22000" />
+      <workItem from="1687586461816" duration="4657000" />
+      <workItem from="1687591253094" duration="2656000" />
     </task>
     <servers />
   </component>

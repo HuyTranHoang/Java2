@@ -1,4 +1,4 @@
-package vn.emloyeefile;
+package vn.employeefile;
 
 public class Emloyee {
     private int code;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.employeefile.EmloyeeController">
+   <children>
+      <AnchorPane fx:id="apTableView" layoutX="65.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="20.0" layoutY="72.0" text="Code" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="72.0" />
+            <Label layoutX="20.0" layoutY="112.0" text="Name" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="112.0" />
+            <Label layoutX="20.0" layoutY="152.0" text="Salaray" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="152.0" />
+            <TextField fx:id="txtCode" layoutX="114.0" layoutY="25.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="70.0" />
+            <TextField fx:id="txtName" layoutX="114.0" layoutY="117.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="110.0" />
+            <TextField fx:id="txtSalary" layoutX="84.0" layoutY="157.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="150.0" />
+            <Button fx:id="btnAdd" layoutX="38.0" layoutY="211.0" mnemonicParsing="false" onAction="#addToList" text="Add" />
+            <Button fx:id="btnRemove" layoutX="84.0" layoutY="211.0" mnemonicParsing="false" onAction="#removeFromList" text="Remove" />
+            <Button fx:id="btnPromoting" layoutX="149.0" layoutY="211.0" mnemonicParsing="false" onAction="#promotingSalary" prefWidth="107.0" text="Promoting Salary" />
+            <Button fx:id="btnSave" layoutX="28.0" layoutY="268.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="229.0" text="Save to file" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apPromote" prefHeight="400.0" prefWidth="300.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="42.0" layoutY="99.0" text="Name: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="112.0" />
+            <Label layoutX="60.0" layoutY="59.0" text="Code:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="72.0" />
+            <Label layoutX="23.0" layoutY="152.0" text="Old salary:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="152.0" />
+            <Label fx:id="lblCode" layoutX="70.0" layoutY="69.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="72.0" />
+            <Label fx:id="lblName" layoutX="52.0" layoutY="109.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="112.0" />
+            <Label fx:id="lblOldSalary" layoutX="56.0" layoutY="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="152.0" />
+            <TextField fx:id="txtNewSalary" layoutX="100.0" layoutY="188.0" />
+            <Label layoutX="22.0" layoutY="192.0" text="New Salary" AnchorPane.leftAnchor="22.0" />
+            <Button fx:id="btnConfirm" layoutX="22.0" layoutY="241.0" mnemonicParsing="false" text="Confirm" />
+            <Button fx:id="btnCancel" layoutX="100.0" layoutY="241.0" mnemonicParsing="false" onAction="#backToView" text="Cancel" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tvEmloyee" layoutX="300.0" prefHeight="400.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
+          <TableColumn fx:id="colName" prefWidth="102.0" text="Name" />
+            <TableColumn fx:id="colSalary" prefWidth="122.0" text="Salary" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

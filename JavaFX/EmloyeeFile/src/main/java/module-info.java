@@ -3,6 +3,6 @@ module vn.emloyeefile {
     requires javafx.fxml;
 
 
-    opens vn.emloyeefile to javafx.fxml;
-    exports vn.emloyeefile;
+    opens vn.employeefile to javafx.fxml;
+    exports vn.employeefile;
 }
