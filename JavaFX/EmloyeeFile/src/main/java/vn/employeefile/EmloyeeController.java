@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.synedra.validatorfx.Validator;
 
 import java.io.*;
 import java.net.URL;
@@ -22,22 +23,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
     private AnchorPane apTableView;
 
     @FXML
-    private Button btnAdd;
-
-    @FXML
-    private Button btnCancel;
-
-    @FXML
     private Button btnConfirm;
-
-    @FXML
-    private Button btnPromoting;
-
-    @FXML
-    private Button btnRemove;
-
-    @FXML
-    private Button btnSave;
 
     @FXML
     private TableColumn<Emloyee, Integer> colCode;
@@ -72,11 +58,92 @@ public class EmloyeeController extends ArrayList<Emloyee> {
     @FXML
     private TextField txtSalary;
 
+    private Validator validator = new Validator();
+
+    private boolean codeIsDirty = false;
+    private boolean nameIsDirty = false;
+    private boolean salaryIsDirty = false;
+
     private ObservableList<Emloyee> observableList;
 
     public void initialize() {
         readFile();
         addDataToTableview();
+        validator();
+
+        txtCode.setOnKeyPressed(keyEvent -> codeIsDirty = true);
+        txtName.setOnKeyPressed(keyEvent -> nameIsDirty = true);
+        txtSalary.setOnKeyPressed(keyEvent -> salaryIsDirty = true);
+//        validator();
+//        resize(svgAdd, 50, 30);
+    }
+
+//    private void resize(SVGPath svg, double width, double height) {
+//
+//        double originalWidth = svg.prefWidth(-1);
+//        double originalHeight = svg.prefHeight(originalWidth);
+//
+//        double scaleX = width / originalWidth;
+//        double scaleY = height / originalHeight;
+//
+//        svg.setScaleX(scaleX);
+//        svg.setScaleY(scaleY);
+//    }
+
+    @FXML
+    void validator() {
+        validator.createCheck()
+                .dependsOn("Name", txtName.textProperty())
+                .withMethod(context -> {
+                    String name = context.get("Name");
+                    if (!nameIsDirty) return;
+                    if (name.isEmpty())
+                        context.error("Name input is required");
+                })
+                .decorates(txtName)
+                .immediate();
+
+        validator.createCheck()
+                .dependsOn("Code", txtCode.textProperty())
+                .withMethod(context -> {
+                    String code = context.get("Code");
+                    if (!codeIsDirty) return;
+                    if (code.isEmpty())
+                        context.error("Code input is required");
+                    else if (!isNumberic(code))
+                        context.error("Code must be number");
+                    else if (Integer.parseInt(code) < 0)
+                        context.error(("Code must be greater than zero"));
+                })
+                .decorates(txtCode)
+                .immediate();
+
+        validator.createCheck()
+                .dependsOn("Salary", txtSalary.textProperty())
+                .withMethod(context -> {
+                    String salary = context.get("Salary");
+                    if (!salaryIsDirty) return;
+                    if (salary.isEmpty())
+                        context.error("Salary input is required");
+                    else if (!isNumberic(salary))
+                        context.error("Salary must be number");
+                    else if (Double.parseDouble(salary) <= 0)
+                        context.error("Salary must greater than zero");
+                })
+                .decorates(txtSalary)
+                .immediate();
+    }
+
+    private boolean isNumberic(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
 
     @FXML
@@ -137,25 +204,28 @@ public class EmloyeeController extends ArrayList<Emloyee> {
 
     @FXML
     void addToList() {
-        if (txtName.getText().isEmpty() || txtCode.getText().isEmpty() || txtSalary.getText().isEmpty()) {
-            alertError("Some input is empty, please fill it!!!");
-            return;
+        if (validator.validate()) {
+            int code = Integer.parseInt(txtCode.getText());
+            String name = txtName.getText();
+            double salary = Double.parseDouble(txtSalary.getText());
+
+            Emloyee emloyee = new Emloyee(code, name, salary);
+            this.add(emloyee);
+
+            observableList = FXCollections.observableArrayList(this);
+            tvEmloyee.setItems(observableList);
         }
-
-        int code = Integer.parseInt(txtCode.getText());
-        String name = txtName.getText();
-        double salary = Double.parseDouble(txtSalary.getText());
-
-        Emloyee emloyee = new Emloyee(code, name, salary);
-        this.add(emloyee);
-
-        observableList = FXCollections.observableArrayList(this);
-        tvEmloyee.setItems(observableList);
     }
 
     @FXML
     void removeFromList() {
         int index = tvEmloyee.getSelectionModel().getSelectedIndex();
+
+        if (index == -1) {
+            alertError("Please select employee to remove!!!");
+            return;
+        }
+
         this.remove(index);
 
         observableList.setAll(this);
@@ -212,6 +282,10 @@ public class EmloyeeController extends ArrayList<Emloyee> {
         colCode.setCellValueFactory(new PropertyValueFactory<>("code"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+
+        colCode.setResizable(false);
+        colName.setResizable(false);
+        colSalary.setResizable(false);
 
         observableList = FXCollections.observableArrayList(this);
         tvEmloyee.setItems(observableList);

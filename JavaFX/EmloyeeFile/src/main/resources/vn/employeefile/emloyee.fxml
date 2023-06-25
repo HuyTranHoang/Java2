@@ -1,48 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.employeefile.EmloyeeController">
-   <children>
-      <AnchorPane fx:id="apTableView" layoutX="65.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label layoutX="20.0" layoutY="72.0" text="Code" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="72.0" />
-            <Label layoutX="20.0" layoutY="112.0" text="Name" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="112.0" />
-            <Label layoutX="20.0" layoutY="152.0" text="Salaray" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="152.0" />
-            <TextField fx:id="txtCode" layoutX="114.0" layoutY="25.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="70.0" />
-            <TextField fx:id="txtName" layoutX="114.0" layoutY="117.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="110.0" />
-            <TextField fx:id="txtSalary" layoutX="84.0" layoutY="157.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="150.0" />
-            <Button fx:id="btnAdd" layoutX="38.0" layoutY="211.0" mnemonicParsing="false" onAction="#addToList" text="Add" />
-            <Button fx:id="btnRemove" layoutX="84.0" layoutY="211.0" mnemonicParsing="false" onAction="#removeFromList" text="Remove" />
-            <Button fx:id="btnPromoting" layoutX="149.0" layoutY="211.0" mnemonicParsing="false" onAction="#promotingSalary" prefWidth="107.0" text="Promoting Salary" />
-            <Button fx:id="btnSave" layoutX="28.0" layoutY="268.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="229.0" text="Save to file" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="apPromote" prefHeight="400.0" prefWidth="300.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label layoutX="42.0" layoutY="99.0" text="Name: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="112.0" />
-            <Label layoutX="60.0" layoutY="59.0" text="Code:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="72.0" />
-            <Label layoutX="23.0" layoutY="152.0" text="Old salary:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="152.0" />
-            <Label fx:id="lblCode" layoutX="70.0" layoutY="69.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="72.0" />
-            <Label fx:id="lblName" layoutX="52.0" layoutY="109.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="112.0" />
-            <Label fx:id="lblOldSalary" layoutX="56.0" layoutY="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="152.0" />
-            <TextField fx:id="txtNewSalary" layoutX="100.0" layoutY="188.0" />
-            <Label layoutX="22.0" layoutY="192.0" text="New Salary" AnchorPane.leftAnchor="22.0" />
-            <Button fx:id="btnConfirm" layoutX="22.0" layoutY="241.0" mnemonicParsing="false" text="Confirm" />
-            <Button fx:id="btnCancel" layoutX="100.0" layoutY="241.0" mnemonicParsing="false" onAction="#backToView" text="Cancel" />
-         </children>
-      </AnchorPane>
-      <TableView fx:id="tvEmloyee" layoutX="300.0" prefHeight="400.0" prefWidth="300.0">
-        <columns>
-          <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
-          <TableColumn fx:id="colName" prefWidth="102.0" text="Name" />
-            <TableColumn fx:id="colSalary" prefWidth="122.0" text="Salary" />
-        </columns>
-      </TableView>
-   </children>
+   <AnchorPane fx:id="apTableView" layoutX="65.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+      <Label layoutX="23.0" layoutY="32.0" text="Code" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="32.0" />
+      <Label layoutX="23.0" layoutY="72.0" text="Name" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="72.0" />
+      <Label layoutX="23.0" layoutY="112.0" text="Salaray" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="112.0" />
+      <TextField fx:id="txtCode" layoutX="83.0" layoutY="30.0" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="30.0" />
+      <TextField fx:id="txtName" layoutX="83.0" layoutY="70.0" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="70.0" />
+      <TextField fx:id="txtSalary" layoutX="83.0" layoutY="110.0" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="110.0" />
+      <Button fx:id="btnAdd" layoutX="27.0" layoutY="211.0" mnemonicParsing="false" onAction="#addToList" prefHeight="25.0" prefWidth="100.0" text="Add">
+         <graphic>
+            <SVGPath fx:id="svgAdd" content="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z&#10;M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnRemove" layoutX="155.0" layoutY="211.0" mnemonicParsing="false" onAction="#removeFromList" prefHeight="25.0" prefWidth="100.0" text="Remove">
+         <graphic>
+            <SVGPath content="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM11 12h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1Zm0-7a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z&#10;M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z&#10;" smooth="false" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnPromoting" layoutX="24.0" layoutY="261.0" mnemonicParsing="false" onAction="#promotingSalary" prefHeight="25.0" prefWidth="226.0" text="Promoting Salary">
+         <graphic>
+            <SVGPath content="M11 15a4 4 0 100-8 4 4 0 000 8zm5-4a5 5 0 11-10 0 5 5 0 0110 0zM9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012zM1 0a1 1 0 00-1 1v8a1 1 0 001 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 00-2-2V3a2 2 0 002-2h10a2 2 0 002 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 00-1-1H1zM9.998 5.083 10 5a2 2 0 10-3.132 1.65 5.982 5.982 0 013.13-1.567z" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnSave" layoutX="24.0" layoutY="311.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="226.0" text="Save to file">
+         <graphic>
+            <SVGPath content="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </AnchorPane>
+   <AnchorPane fx:id="apPromote" prefHeight="400.0" prefWidth="300.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <Label layoutX="42.0" layoutY="99.0" text="Name: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="112.0" />
+         <Label layoutX="60.0" layoutY="59.0" text="Code:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="72.0" />
+         <Label layoutX="23.0" layoutY="152.0" text="Old salary:" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="152.0" />
+         <Label fx:id="lblCode" layoutX="70.0" layoutY="69.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="72.0" />
+         <Label fx:id="lblName" layoutX="52.0" layoutY="109.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="112.0" />
+         <Label fx:id="lblOldSalary" layoutX="56.0" layoutY="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="152.0" />
+         <TextField fx:id="txtNewSalary" layoutX="100.0" layoutY="188.0" />
+         <Label layoutX="22.0" layoutY="192.0" text="New Salary" AnchorPane.leftAnchor="22.0" />
+         <Button fx:id="btnConfirm" layoutX="22.0" layoutY="241.0" mnemonicParsing="false" text="Confirm" />
+         <Button fx:id="btnCancel" layoutX="100.0" layoutY="241.0" mnemonicParsing="false" onAction="#backToView" text="Cancel" />
+      </children>
+   </AnchorPane>
+   <TableView fx:id="tvEmloyee" layoutX="300.0" prefHeight="400.0" prefWidth="300.0">
+      <columns>
+         <TableColumn fx:id="colCode" editable="false" prefWidth="75.0" text="Code" />
+         <TableColumn fx:id="colName" editable="false" prefWidth="102.0" text="Name" />
+         <TableColumn fx:id="colSalary" editable="false" prefWidth="117.0" text="Salary" />
+      </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+   </TableView>
 </AnchorPane>
