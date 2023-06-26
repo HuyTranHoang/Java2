@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="826ceb61-9a68-46ed-8f5e-5dcfbe02d240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" afterDir="false" />
+    <list default="true" id="826ceb61-9a68-46ed-8f5e-5dcfbe02d240" name="Changes" comment="validateFx">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/Emloyee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/Emloyee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/EmloyeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/emloyeefile/EmloyeeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/emloyeefile/emloyee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/emloyeefile/emloyee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/employee.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +19,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="ProjectId" id="2Rbn9iLbVLGeIkbvhTAxFRzgXbx" />
   <component name="ProjectViewState">
@@ -42,10 +42,12 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Aptech/Java2/BaiTap/JavaFX/EmloyeeFile&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,11 +88,55 @@
       <workItem from="1687527501645" duration="4234000" />
       <workItem from="1687536964932" duration="22000" />
       <workItem from="1687586461816" duration="4657000" />
-      <workItem from="1687591253094" duration="2656000" />
+      <workItem from="1687591253094" duration="3069000" />
+      <workItem from="1687594352689" duration="466000" />
+      <workItem from="1687636009531" duration="4758000" />
+      <workItem from="1687672960276" duration="390000" />
+      <workItem from="1687678269320" duration="3203000" />
+      <workItem from="1687690568471" duration="2003000" />
+      <workItem from="1687693301027" duration="1479000" />
+      <workItem from="1687752163139" duration="3448000" />
     </task>
+    <task id="LOCAL-00001" summary="update employee">
+      <option name="closed" value="true" />
+      <created>1687594788930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687594788930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="validateFx">
+      <option name="closed" value="true" />
+      <created>1687681473398</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687681473398</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update employee" />
+    <MESSAGE value="validateFx" />
+    <option name="LAST_COMMIT_MESSAGE" value="validateFx" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

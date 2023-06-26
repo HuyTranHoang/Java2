@@ -58,37 +58,36 @@ public class EmloyeeController extends ArrayList<Emloyee> {
     @FXML
     private TextField txtSalary;
 
-    private Validator validator = new Validator();
+    @FXML
+    private ToggleGroup tggGender;
 
-    private boolean codeIsDirty = false;
-    private boolean nameIsDirty = false;
-    private boolean salaryIsDirty = false;
+    @FXML
+    private RadioButton rbFemale;
+
+    @FXML
+    private RadioButton rbMale;
+
+    private final Validator validator = new Validator();
 
     private ObservableList<Emloyee> observableList;
+
+    private boolean isCodeDirty = false;
+    private boolean isNameDirty = false;
+    private boolean isSalaryDirty = false;
+    private boolean isNewSalaryDirty = false;
 
     public void initialize() {
         readFile();
         addDataToTableview();
         validator();
 
-        txtCode.setOnKeyPressed(keyEvent -> codeIsDirty = true);
-        txtName.setOnKeyPressed(keyEvent -> nameIsDirty = true);
-        txtSalary.setOnKeyPressed(keyEvent -> salaryIsDirty = true);
-//        validator();
-//        resize(svgAdd, 50, 30);
+        txtCode.setOnKeyPressed(keyEvent -> isCodeDirty = true);
+        txtName.setOnKeyPressed(keyEvent -> isNameDirty = true);
+        txtSalary.setOnKeyPressed(keyEvent -> isSalaryDirty = true);
+        txtNewSalary.setOnKeyPressed(keyEvent -> isNewSalaryDirty = true);
     }
 
-//    private void resize(SVGPath svg, double width, double height) {
-//
-//        double originalWidth = svg.prefWidth(-1);
-//        double originalHeight = svg.prefHeight(originalWidth);
-//
-//        double scaleX = width / originalWidth;
-//        double scaleY = height / originalHeight;
-//
-//        svg.setScaleX(scaleX);
-//        svg.setScaleY(scaleY);
-//    }
+
 
     @FXML
     void validator() {
@@ -96,7 +95,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 .dependsOn("Name", txtName.textProperty())
                 .withMethod(context -> {
                     String name = context.get("Name");
-                    if (!nameIsDirty) return;
+                    if (!isNameDirty) return;
                     if (name.isEmpty())
                         context.error("Name input is required");
                 })
@@ -107,7 +106,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 .dependsOn("Code", txtCode.textProperty())
                 .withMethod(context -> {
                     String code = context.get("Code");
-                    if (!codeIsDirty) return;
+                    if (!isCodeDirty) return;
                     if (code.isEmpty())
                         context.error("Code input is required");
                     else if (!isNumberic(code))
@@ -122,7 +121,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 .dependsOn("Salary", txtSalary.textProperty())
                 .withMethod(context -> {
                     String salary = context.get("Salary");
-                    if (!salaryIsDirty) return;
+                    if (!isSalaryDirty) return;
                     if (salary.isEmpty())
                         context.error("Salary input is required");
                     else if (!isNumberic(salary))
@@ -132,6 +131,30 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 })
                 .decorates(txtSalary)
                 .immediate();
+
+        validator.createCheck()
+                .dependsOn("New Salary", txtNewSalary.textProperty())
+                .withMethod(context -> {
+                    String newSalary = context.get("New Salary");
+                    if (!isNewSalaryDirty) return;
+                    if (newSalary.isEmpty())
+                        context.error("Salary input is required");
+                    else if (!isNumberic(newSalary))
+                        context.error("Salary must be number");
+                    else if (Double.parseDouble(newSalary) <= 0)
+                        context.error("Salary must greater than zero");
+                })
+                .decorates(txtNewSalary)
+                .immediate();
+
+        validator.createCheck()
+                .dependsOn("Gender", tggGender.selectedToggleProperty())
+                .withMethod(context -> {
+                    if (context.get("Gender") == null)
+                        context.error("Please select gender");
+                })
+                .decorates(rbMale)
+                .decorates(rbFemale);
     }
 
     private boolean isNumberic(String strNum) {
@@ -204,6 +227,11 @@ public class EmloyeeController extends ArrayList<Emloyee> {
 
     @FXML
     void addToList() {
+
+        isCodeDirty = true;
+        isNameDirty = true;
+        isSalaryDirty = true;
+
         if (validator.validate()) {
             int code = Integer.parseInt(txtCode.getText());
             String name = txtName.getText();
@@ -211,10 +239,20 @@ public class EmloyeeController extends ArrayList<Emloyee> {
 
             Emloyee emloyee = new Emloyee(code, name, salary);
             this.add(emloyee);
+            resetInput();
 
             observableList = FXCollections.observableArrayList(this);
             tvEmloyee.setItems(observableList);
         }
+    }
+
+    private void resetInput() {
+        isCodeDirty = false;
+        isNameDirty = false;
+        isSalaryDirty = false;
+        txtCode.setText("");
+        txtName.setText("");
+        txtSalary.setText("");
     }
 
     @FXML
@@ -227,6 +265,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
         }
 
         this.remove(index);
+        resetInput();
 
         observableList.setAll(this);
         tvEmloyee.setItems(observableList);
@@ -254,22 +293,28 @@ public class EmloyeeController extends ArrayList<Emloyee> {
     }
 
     private void confirmSalary(Emloyee emloyee) {
-        double salary = Double.parseDouble(txtNewSalary.getText());
 
-        if (emloyee.getSalary() > salary) {
-            alertError("New salary must greater than old salary!!!");
-            return;
+        isNewSalaryDirty = true;
+
+        if (validator.validate()) {
+            double salary = Double.parseDouble(txtNewSalary.getText());
+
+            if (emloyee.getSalary() > salary) {
+                alertError("New salary must greater than old salary!!!");
+                return;
+            }
+
+            emloyee.setSalary(salary);
+
+            alertSuccess("Promoting salary successfully!!!");
+
+            isNewSalaryDirty = false;
+            txtNewSalary.setText("");
+            backToView();
+
+            observableList.setAll(this);
+            tvEmloyee.setItems(observableList);
         }
-
-        emloyee.setSalary(salary);
-
-        alertSuccess("Promoting salary successfully!!!");
-
-        txtNewSalary.setText("");
-        backToView();
-
-        observableList.setAll(this);
-        tvEmloyee.setItems(observableList);
     }
     
     @FXML
