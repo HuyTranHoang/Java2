@@ -7,6 +7,8 @@ import java.util.Properties;
 
 public class ConnectDB {
 
+
+
     private static Connection connection;
 
     private ConnectDB(){};
@@ -19,9 +21,6 @@ public class ConnectDB {
             String port="5432";
             String dbname="java";
             String dburl = "jdbc:postgresql://"+host+":"+port+"/"+dbname+"?loggerLevel=OFF";
-            Properties props = new Properties();
-            props.setProperty("user", "postgres");
-            props.setProperty("password", "25091995");
             try {
                 connection = DriverManager.getConnection(dburl, props);
             } catch (SQLException e) {

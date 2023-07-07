@@ -69,6 +69,8 @@ public class EmloyeeController extends ArrayList<Emloyee> {
 
     private final Validator validator = new Validator();
 
+    private final Validator salaryValidator = new Validator();
+
     private ObservableList<Emloyee> observableList;
 
     private boolean isCodeDirty = false;
@@ -80,6 +82,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
         readFile();
         addDataToTableview();
         validator();
+        salaryValidator();
 
         txtCode.setOnKeyPressed(keyEvent -> isCodeDirty = true);
         txtName.setOnKeyPressed(keyEvent -> isNameDirty = true);
@@ -132,7 +135,18 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 .decorates(txtSalary)
                 .immediate();
 
-        validator.createCheck()
+//        validator.createCheck()
+//                .dependsOn("Gender", tggGender.selectedToggleProperty())
+//                .withMethod(context -> {
+//                    if (context.get("Gender") == null)
+//                        context.error("Please select gender");
+//                })
+//                .decorates(rbMale)
+//                .decorates(rbFemale);
+    }
+
+    private void salaryValidator() {
+        salaryValidator.createCheck()
                 .dependsOn("New Salary", txtNewSalary.textProperty())
                 .withMethod(context -> {
                     String newSalary = context.get("New Salary");
@@ -147,14 +161,6 @@ public class EmloyeeController extends ArrayList<Emloyee> {
                 .decorates(txtNewSalary)
                 .immediate();
 
-        validator.createCheck()
-                .dependsOn("Gender", tggGender.selectedToggleProperty())
-                .withMethod(context -> {
-                    if (context.get("Gender") == null)
-                        context.error("Please select gender");
-                })
-                .decorates(rbMale)
-                .decorates(rbFemale);
     }
 
     private boolean isNumberic(String strNum) {
@@ -296,7 +302,7 @@ public class EmloyeeController extends ArrayList<Emloyee> {
 
         isNewSalaryDirty = true;
 
-        if (validator.validate()) {
+        if (salaryValidator.validate()) {
             double salary = Double.parseDouble(txtNewSalary.getText());
 
             if (emloyee.getSalary() > salary) {

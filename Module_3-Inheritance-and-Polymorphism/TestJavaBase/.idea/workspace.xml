@@ -5,8 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1c8bfb8-5123-4df3-bbdd-8bd29323aa66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ConnectDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SinhVienDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaFX/Student1381475_TranHoangHuy/src/main/java/vn/qlhn/student1381475_tranhoanghuy/ConnectDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/java/vn/employeefile/Emloyee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/java/vn/employeefile/EmloyeeApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/java/vn/employeefile/EmloyeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/resources/vn/employeefile/emloyee.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/EmloyeeFile/src/main/resources/vn/employeefile/employee.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/materialfx-11.13.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/materialfx-11.16.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/mfxcore-11.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/mfxeffects-11.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/mfxlocalization-11.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/mfxresources-11.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/virtualizedfx-11.2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/lib/virtualizedfx-11.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/vn/fxdatabase/DatabaseUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/vn/fxdatabase/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/vn/fxdatabase/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/vn/fxdatabase/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/java/vn/fxdatabase/StudentManagementApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/resources/vn/fxdatabase/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/FxDatabase/src/main/resources/vn/fxdatabase/student-management.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConnectDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConnectDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +99,7 @@
       <workItem from="1687351922189" duration="4234000" />
       <workItem from="1687363729704" duration="66000" />
       <workItem from="1687363868699" duration="29000" />
+      <workItem from="1688145517767" duration="244000" />
     </task>
     <servers />
   </component>

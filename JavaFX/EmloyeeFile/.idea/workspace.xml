@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="826ceb61-9a68-46ed-8f5e-5dcfbe02d240" name="Changes" comment="validateFx">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookObjectFile/src/main/java/vn/bookobjectfile/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/employeefile/EmloyeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vn/employeefile/emloyee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_3-Inheritance-and-Polymorphism/TestJavaBase/src/main/java/org/example/ConnectDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_3-Inheritance-and-Polymorphism/TestJavaBase/src/main/java/org/example/ConnectDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,28 +28,32 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-20.0.1/lib/src.zip!/java.base/java/lang/NoSuchMethodError.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/net/synedra/validatorfx/0.4.2/validatorfx-0.4.2.jar!/net/synedra/validatorfx/Validator.class" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="2Rbn9iLbVLGeIkbvhTAxFRzgXbx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Aptech/Java2/BaiTap/JavaFX/EmloyeeFile&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Aptech/Java2/BaiTap/JavaFX/FxDatabase",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MTConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Aptech\Java2\EmloyeeFile\src\main\resources\vn\emloyeefile" />
@@ -96,6 +99,18 @@
       <workItem from="1687690568471" duration="2003000" />
       <workItem from="1687693301027" duration="1479000" />
       <workItem from="1687752163139" duration="3448000" />
+      <workItem from="1687775805660" duration="81000" />
+      <workItem from="1687784020659" duration="1729000" />
+      <workItem from="1687789054209" duration="609000" />
+      <workItem from="1688020960268" duration="57000" />
+      <workItem from="1688062480029" duration="66000" />
+      <workItem from="1688067822575" duration="69000" />
+      <workItem from="1688067903877" duration="1289000" />
+      <workItem from="1688069209341" duration="947000" />
+      <workItem from="1688070929354" duration="54000" />
+      <workItem from="1688130322440" duration="20000" />
+      <workItem from="1688165255476" duration="643000" />
+      <workItem from="1688168832340" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="update employee">
       <option name="closed" value="true" />
